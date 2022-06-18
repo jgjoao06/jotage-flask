@@ -1,0 +1,2 @@
+FLASK_APP=servicos.py
+FLASK_ENV=development
