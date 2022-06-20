@@ -1,5 +1,11 @@
-from app import app
+from __init__ import app
 import os
+from flask import request, render_template
+
+@app.route('/', methods=['GET'])
+def index():
+    if request.method == 'GET':
+        return render_template('index.html')
 
 if __name__=='main':
     port = int(os.getenv('PORT'), '5000')
