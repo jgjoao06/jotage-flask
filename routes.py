@@ -1,4 +1,3 @@
-from http.client import OK
 from flask import request, render_template, Response
 from __init__ import app
 import request_link

@@ -1,5 +1,3 @@
-from crypt import methods
-from urllib import response
 from __init__ import app
 import os
 from flask import request, render_template, Response
@@ -13,7 +11,7 @@ def index():
 @app.route('/login', methods=['GET'])
 def index():
     if request.method == 'GET':
-        return render_template('login.html')
+        return render_template('index.html')
 
 @app.route('/link_publico', methods=['GET'])
 def link_publico():
