@@ -8,6 +8,11 @@ def index():
     if request.method == 'GET':
         return render_template('index.html')
 
+@app.route('/login', methods=['GET'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+
 @app.route('/link_publico', methods=['GET'])
 def link_publico():
     if request.method == 'GET':
