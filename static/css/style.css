@@ -72,6 +72,9 @@ body {
 }
 
 .conteudo-principal-botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFFFFF;
     width: 160px;
     height: 60px; 
