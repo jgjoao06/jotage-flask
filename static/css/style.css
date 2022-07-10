@@ -81,12 +81,14 @@ body {
     font-family: 'Sarala', sans-serif;
     font-weight: 400;
     font-size: 23px;
-    color: #000000
+    color: #000000;
+    padding: 10px 48px;
 }
 
 .conteudo-principal-botao:hover{
     background-color: #c4f881;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .conteudo-principal-imagem{

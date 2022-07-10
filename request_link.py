@@ -18,4 +18,4 @@ def retornaLink(email, api_token):
     resposta_g = g.json()
 
     return(str(resposta_g['data']['5a3a884011009c28ac9ac8b8d15849cbd84f96bf']))
-
+    

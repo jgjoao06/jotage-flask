@@ -1,6 +1,8 @@
-from flask import request, render_template
+from http.client import OK
+from flask import request, render_template, Response
 from __init__ import app
 import request_link
+import leads
 
 @app.route('/', methods=['GET'])
 def index():
@@ -13,5 +15,14 @@ def link_publico():
         resp = request.json 
         link_exact = request_link.retornaLink(resp['email'], resp['api_token'])
         return link_exact
+
+@app.route('/leads_rd', methods=['POST'])
+def leads_rd():
+    if request.method == 'POST':
+        resp = request.json[0]
+        resposta = leads.preencheLista(resp)
+        if resposta == "ok":
+            return Response("200")
+
 
 app.run(host='0.0.0.0', port=5000)
