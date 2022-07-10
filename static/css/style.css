@@ -73,8 +73,6 @@ body {
 
 .conteudo-principal-botao{    
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #FFFFFF;
     width: 160px;
     height: 60px; 
@@ -86,6 +84,8 @@ body {
     font-size: 23px;
     color: #000000;
     padding: 10px 48px;
+    justify-content: center;
+    align-items: center;
 }
 
 .conteudo-principal-botao:hover{
