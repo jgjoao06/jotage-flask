@@ -17,7 +17,7 @@ def login():
 def link_publico():
     if request.method == 'GET':
         resp = request.json 
-        link_exact = request_link.retornaLink(resp['email'], resp['api_token'])
+        link_exact = request_link.retornaLink(resp['email'])
         return link_exact
 
 @app.route('/leads_rd', methods=['POST'])

@@ -1,7 +1,9 @@
+import os
 import requests
 
 
-def retornaID(email, api_token):
+def retornaID(email):
+    api_token = os.environ.get('pipedrive-api_token')
     try:
         r = requests.get(f'https://inchurch.pipedrive.com/api/v1/persons/search?fields=email&exact_match=true&term={email}&api_token={api_token}')
         resposta_r = r.json()
@@ -11,8 +13,9 @@ def retornaID(email, api_token):
 
 
 
-def retornaLink(email, api_token):
-    id = retornaID(email, api_token)
+def retornaLink(email):
+    api_token = os.environ.get('pipedrive-api_token')
+    id = retornaID(email)
     try:
         g = requests.get(f'https://inchurch.pipedrive.com/api/v1/organizations/{id}?api_token={api_token}')
         resposta_g = g.json()
