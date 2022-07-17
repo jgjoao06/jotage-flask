@@ -22,3 +22,4 @@ def retornaLink(email):
         return(str(resposta_g['data']['5a3a884011009c28ac9ac8b8d15849cbd84f96bf']))
     except KeyError:
         return ("Não foi possível identificar o ID no Pipedrive para este email")
+
